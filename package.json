@@ -1,0 +1,45 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "prisma:migrate": "pnpm prisma migrate deploy",
+    "prisma:fresh": "npx supabase db reset && pnpm prisma migrate dev && pnpm prisma migrate reset"
+  },
+  "prisma": {
+    "seed": "npx tsx prisma/seed.ts"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "@nuxtjs/supabase": "^1.1.5",
+    "@types/node": "^20.11.5",
+    "nuxt": "^3.9.3",
+    "nuxt-security": "^1.0.1",
+    "prettier": "^3.2.4",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "prisma": "^5.8.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vue": "^3.4.14",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.17",
+    "@heroicons/vue": "^2.1.1",
+    "@nuxt/ui": "^2.12.3",
+    "@pinia/nuxt": "^0.5.1",
+    "@prisma/client": "^5.8.1",
+    "@tailwindcss/forms": "^0.5.7",
+    "@trpc/client": "^10.45.0",
+    "@trpc/server": "^10.45.0",
+    "pinia": "^2.1.7",
+    "superjson": "^2.2.1",
+    "trpc-nuxt": "^0.10.17",
+    "zod": "^3.22.4"
+  }
+}
